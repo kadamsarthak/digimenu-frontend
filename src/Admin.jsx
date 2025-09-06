@@ -8,12 +8,14 @@ export default function Admin() {
 
 
  const navigate = useNavigate();
-  const [usrnm, setUsrnm] = useState("");
-  const [pwd, setPwd] = useState("");
+  const [usrnm, setUsrnm] = useState("Admin");
+  const [pwd, setPwd] = useState("pass123");
 
  const [usrchk,usrCheck] = useState("");
  const [pwchk,pwCheck] = useState("");
 
+
+ 
   const handleusr = (e) => {
     usrCheck(e.target.value);
   }
@@ -81,9 +83,9 @@ export default function Admin() {
         <form className='frm' onSubmit={handleSubmit}> {/* Attach api function to form submission */}
           <h1>Admin Dashboard Login</h1>
           <label htmlFor='usrnm'>Username</label>
-          <input type='text' name='usrnm' id='usrnm' onChange={handleusr} />
+          <input type='text' name='usrnm' id='usrnm' value={usrnm} onChange={handleusr} />
           <label htmlFor='pwd'>Password</label>
-          <input type='password' name='pwd' id='pwd' onChange={handlepwd} />
+          <input type='password' name='pwd' id='pwd' value={pwd} onChange={handlepwd} />
           <button type="submit">Login</button>{/* Use type="submit" to trigger form submit */}
         </form>
       </div>
