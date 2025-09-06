@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+  }
+  
+  h1 {
+    color: #2a3d2b;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+    width: 100%;
+  }
+  
+  .menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(135deg, #a9c2a3, #c3d8c5);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    width: 100%; /* Force it to respect container width */
+    box-sizing: border-box;
+    justify-content: space-between; /* Spacing between image and details */
+  }
+  
+  .menu-details p{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .menu-item:hover {
+    background: linear-gradient(135deg, #7f9f88, #a5c7a0);
+    transform: scale(1.02);
+  }
+  
+  .menu-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+  
+  .menu-details {
+    color: #333;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .menu-details h2 {
+    color: #909227;
+  }
+  
+  .menu-details p {
+    margin: 5px 0;
+    color: #444;
+  }
+  
+  /* 📱 Mobile responsive */
+  @media (max-width: 600px) {
+    .menu-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .menu-img {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%; /* Make image responsive */
+      height: auto;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  

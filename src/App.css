@@ -1,0 +1,60 @@
+body{
+   padding-top: 70px;
+}
+
+.nav {
+  background-color: #7f9f88; /* Darker sage green background for the navbar */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.cont {
+  color: #f5f5f5; /* Lighter text color for better contrast */
+  font-weight: bold;
+  list-style: none;
+}
+
+.me-auto {
+  color: #f5f5f5; /* Light text color for the nav items */
+}
+
+.navig {
+  /* color: #f5f5f5; Light text for the links */
+  font-size: 17px;
+  color: gainsboro;
+  margin-right: 15px;
+}
+
+.navig:hover {
+  /* color: #2a3d2b; Dark green on hover for contrast */
+  color: #98a850;
+}
+
+.navbar-brand {
+  color: #2a3d2b; /* Dark green for brand */
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-toggler {
+  border-color: #2a3d2b; /* Dark green border for the navbar toggler */
+}
+
+.navbar-toggler-icon {
+  background-color: #2a3d2b; /* Dark green color for the toggler icon */
+}
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+.active-link {
+  font-weight: bold;
+  color: #556012;
+}
+
+
