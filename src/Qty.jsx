@@ -15,7 +15,7 @@ export default function Qty() {
 
   // --------------------- fetch quantity
   function menucard() {
-    axios.get("http://digimenu-api.onrender.com/qty")
+    axios.get("https://digimenu-api.onrender.com/qty")
       .then(response => {
         let r = response.data.data;
         console.log(r);
@@ -25,7 +25,7 @@ export default function Qty() {
 
   // --------------------- delete quantity
   function delQty(qtyid) {
-    axios.delete("http://digimenu-api.onrender.com/delqty", {
+    axios.delete("https://digimenu-api.onrender.com/delqty", {
       data: { "qid": qtyid }
     })
       .then(response => {
@@ -43,7 +43,7 @@ export default function Qty() {
       qid: qid,
       qty: quantity
     }
-    axios.post("http://digimenu-api.onrender.com/addqty", newQ)
+    axios.post("https://digimenu-api.onrender.com/addqty", newQ)
       .then(response => {
         alert("Quantity added successfully");
         menucard();

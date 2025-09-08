@@ -11,7 +11,7 @@ export default function Home() {
   }, []);
   
   function menucard() {
-    axios.get("http://digimenu-api.onrender.com/mainmenu")
+    axios.get("https://digimenu-api.onrender.com/mainmenu")
     .then(response => {
       let r = response.data.menu;
       console.log(r);
@@ -28,7 +28,7 @@ export default function Home() {
         {data.map((item, index) => (
           
           <div className="menu-item" key={index}>
-            <img src={`http://digimenu-api.onrender.com/uploads/${item.img_url}`} alt="menu" className="menu-img"/>
+            <img src={`https://digimenu-api.onrender.com/uploads/${item.img_url}`} alt="menu" className="menu-img"/>
             <div className="menu-details">
               <h2>{item.menu_name}</h2>
               <p>Price: ₹{item.menu_price}</p>

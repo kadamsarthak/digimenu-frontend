@@ -25,7 +25,7 @@ export default function Menu() {
   }, []);
 
   function menucard() {
-    axios.get("http://digimenu-api.onrender.com/menu")
+    axios.get("https://digimenu-api.onrender.com/menu")
       .then(response => {
         let r = response.data.menu;
         setDta(r);
@@ -33,7 +33,7 @@ export default function Menu() {
   }
 
   function delMenu(Mid) {
-    axios.delete("http://digimenu-api.onrender.com/delmenu", {
+    axios.delete("https://digimenu-api.onrender.com/delmenu", {
       data: { "id": Mid }
     })
       .then(response => {
@@ -43,14 +43,14 @@ export default function Menu() {
   }
 
   function fetchCategories() {
-    axios.get("http://digimenu-api.onrender.com/menucategory")
+    axios.get("https://digimenu-api.onrender.com/menucategory")
       .then(response => {
         setCategories(response.data.category);
       });
   }
 
   function fetchQty() {
-    axios.get("http://digimenu-api.onrender.com/qty")
+    axios.get("https://digimenu-api.onrender.com/qty")
       .then(response => {
         setQty(response.data.data);
       });
@@ -64,7 +64,7 @@ export default function Menu() {
     formData.append('qid', selectedQty);
     formData.append('img', imgFile);
 
-    axios.post("http://digimenu-api.onrender.com/addmenu", formData, {
+    axios.post("https://digimenu-api.onrender.com/addmenu", formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }

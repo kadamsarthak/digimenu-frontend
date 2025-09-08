@@ -18,7 +18,7 @@ export default function EditM() {
     const [quantities, setQuantities] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://digimenu-api.onrender.com/menu`)
+        axios.get(`https://digimenu-api.onrender.com/menu`)
             .then(response => {
                 const { menu_name, menu_price, cid, qid } = response.data;
                 setMenu({ name: menu_name || "", price: menu_price|| "", cid: cid || "", qid: qid || "" });
@@ -29,11 +29,11 @@ export default function EditM() {
     
 
         // Fetch categories
-        axios.get("http://digimenu-api.onrender.com/menucategory")
+        axios.get("https://digimenu-api.onrender.com/menucategory")
             .then(response => setCategories(response.data.category || []));
 
         // Fetch quantities
-        axios.get("http://digimenu-api.onrender.com/qty")
+        axios.get("https://digimenu-api.onrender.com/qty")
             .then(response => setQuantities(response.data.data || []));
     }, [id]);
 
@@ -45,7 +45,7 @@ export default function EditM() {
     function handleSubmit(e) {
         e.preventDefault();
         console.log("Submitting form...");
-        axios.put(`http://digimenu-api.onrender.com/updatemenu`, {
+        axios.put(`https://digimenu-api.onrender.com/updatemenu`, {
             mid: id,
             name: menu.name,
             price: menu.price,

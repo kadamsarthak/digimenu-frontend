@@ -14,7 +14,7 @@ export default function Category() {
 
   // -------------------- category fetch
   function menucard() {
-    axios.get("http://digimenu-api.onrender.com/menucategory")
+    axios.get("https://digimenu-api.onrender.com/menucategory")
       .then(response => {
         let r = response.data.category;
         console.log(r);
@@ -24,7 +24,7 @@ export default function Category() {
 
   // ------------------- delete category
   function delCategory(catid) {
-    axios.delete("http://digimenu-api.onrender.com/delCat", {
+    axios.delete("https://digimenu-api.onrender.com/delCat", {
       data: { "cid": catid }
     })
       .then(response => {
@@ -40,7 +40,7 @@ export default function Category() {
     const newC = {
       grp_name: cat
     };
-    axios.post("http://digimenu-api.onrender.com/addCat", newC)
+    axios.post("https://digimenu-api.onrender.com/addCat", newC)
       .then(response => {
         alert("Category Added successfully");
         menucard();

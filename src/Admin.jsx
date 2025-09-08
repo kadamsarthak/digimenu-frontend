@@ -8,8 +8,8 @@ export default function Admin() {
 
 
  const navigate = useNavigate();
-  const [usrnm, setUsrnm] = useState("Admin");
-  const [pwd, setPwd] = useState("pass123");
+  const [usrnm, setUsrnm] = useState("");
+  const [pwd, setPwd] = useState("");
 
  const [usrchk,usrCheck] = useState("");
  const [pwchk,pwCheck] = useState("");
@@ -26,7 +26,7 @@ export default function Admin() {
 
   function api() {
     
-    return axios.get("http://digimenu-api.onrender.com/admin")
+    return axios.get("https://digimenu-api.onrender.com/admin")
       .then(response => {
         // console.log(response.data);
         let usr = response.data.admin[0].admin;
@@ -43,7 +43,7 @@ export default function Admin() {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    axios.get("http://digimenu-api.onrender.com/admin")
+    axios.get("https://digimenu-api.onrender.com/admin")
       .then(response => {
         let usr = response.data.admin[0].admin;
         let p = response.data.admin[0].pwd;
@@ -83,9 +83,9 @@ export default function Admin() {
         <form className='frm' onSubmit={handleSubmit}> {/* Attach api function to form submission */}
           <h1>Admin Dashboard Login</h1>
           <label htmlFor='usrnm'>Username</label>
-          <input type='text' name='usrnm' id='usrnm' value={usrnm} onChange={handleusr} />
+          <input type='text' name='usrnm' id='usrnm' onChange={handleusr} />
           <label htmlFor='pwd'>Password</label>
-          <input type='password' name='pwd' id='pwd' value={pwd} onChange={handlepwd} />
+          <input type='password' name='pwd' id='pwd' onChange={handlepwd} />
           <button type="submit">Login</button>{/* Use type="submit" to trigger form submit */}
         </form>
       </div>
